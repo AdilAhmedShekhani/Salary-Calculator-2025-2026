@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Salary Tax Calculator – Adil Ahmed Shekhani</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>
+        Salary Tax Calculator 2025–2026
+        <small
+          >by
+          <a href="https://pk.linkedin.com/in/adilahmedshekhani" target="_blank"
+            >Adil Ahmed Shekhani</a
+          ></small
+        >
+      </h2>
+
+      <label>Your Name:</label>
+      <input type="text" id="name" placeholder="Adil Ahmed" />
+
+      <label>Monthly Salary (PKR):</label>
+      <input type="number" id="salary" placeholder="100000" />
+
+      <label>Joining Month:</label>
+      <select id="joining">
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+      </select>
+
+      <button onclick="calculateTax()">Calculate</button>
+
+      <div class="output" id="output" style="display: none">
+        <div id="resultArea"></div>
+        <button onclick="downloadPDF()">📄 Download PDF</button>
+        <button onclick="exportExcel()">📊 Export Excel</button>
+        <button onclick="sendByEmail()">📧 Send Email</button>
+        <div class="success" id="msg"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
